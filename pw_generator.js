@@ -84,6 +84,7 @@ function gen_password() {
     cryptoShuffle(pw_chars_array);  // shuffle password characters
     pw = pw_chars_array.join("");   // join password characters to form password
     console.log(pw);        // log password to console
+    // console.log(pw.length)
 
     let password_disp = document.querySelector("#password");    // get element to display password
     password_disp.textContent = pw;                             // set password to display element
@@ -92,7 +93,7 @@ function gen_password() {
 // function to copy password to clipboard
 function copy_password() {
     let password_disp = document.querySelector("#password");            // get element to display password
-    let pw = password_disp.innerHTML;                                   // get password from display element
+    let pw = password_disp.textContent;                                   // get password from display element
     
     // if password is empty, log to console and return
     if (pw === "") {
