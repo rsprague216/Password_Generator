@@ -1,18 +1,19 @@
 console.log("Hello from Password Generator");
 
-let pw_length = 20;     // default password length
-let pw = "";            // initial password as empty string
-
 const pw_length_input = document.querySelector("#pw_length");   // input field for password length
+let pw_length = pw_length_input.value;                          // get password length from input field
 const pw_size_disp = document.querySelector("#pw_size");        // display for password length
-pw_size_disp.innerHTML = pw_length_input.value;                 // set initial display value to default password length
+pw_size_disp.textContent = pw_length;                           // set initial display value to default password length
 
-// add event listener to input field for password length, update password length when input changes
-pw_length_input.addEventListener("input", function() {
+gen_password();     // generate initial password
+
+// function to update password length display as user sets password length
+function update_len_display() {
     pw_length = Number(pw_length_input.value);  // get password length from input field
     pw_size_disp.innerHTML = pw_length;         // set display value to password length
-});
+}
 
+// function to build selection set based on toggles
 function buildSelctionSet(toggles, avoid_ambig) {
     let characters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ",             // Uppercase
                       "abcdefghijklmnopqrstuvwxyz",             // Lowercase
@@ -49,7 +50,7 @@ function cryptoShuffle(array) {
 function gen_password() {
     console.log("generating password length " + pw_length + "...");
     
-    pw = "";    // reset password to empty string so generated password is not appended to previous password
+    let pw = "";    // reset password to empty string so generated password is not appended to previous password
 
     // get toggle switches for password generation
     let toggles = [document.querySelector("#pw_uppercase").checked,
@@ -93,7 +94,7 @@ function gen_password() {
 // function to copy password to clipboard
 function copy_password() {
     let password_disp = document.querySelector("#password");            // get element to display password
-    let pw = password_disp.textContent;                                   // get password from display element
+    let pw = password_disp.textContent;                                 // get password from display element
     
     // if password is empty, log to console and return
     if (pw === "") {

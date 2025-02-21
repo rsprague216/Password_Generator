@@ -12,18 +12,18 @@
                 <p id="password"></p>
             </div>
             <div id="options_div">
-                <input type="range" id="pw_length" min="8" max="64" value="20">
+                <input type="range" id="pw_length" min="8" max="64" value="20" onclick="gen_password()" oninput="update_len_display()">
                 <span id="pw_size"></span>
                 <br>
                 <!-- <p id="pw_strength">
                     Password Strength: <span id="pw_strength_value">Weak</span>     // Not implemented yet
                 </p> -->
                 <p id="toggles">
-                    <input type="checkbox" id="pw_uppercase" checked>Use Uppercase
-                    <input type="checkbox" id="pw_lowercase" checked>Use Lowercase
-                    <input type="checkbox" id="pw_numbers" checked>Use Numbers
-                    <input type="checkbox" id="pw_special" checked>Use Special Characters
-                    <input type="checkbox" id="avoid_ambig" checked>Avoid Ambiguous Characters
+                    <input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Use Uppercase
+                    <input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Use Lowercase
+                    <input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Use Numbers
+                    <input type="checkbox" id="pw_special" onclick="gen_password()" checked>Use Special Characters
+                    <input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters
                 </p>
                 <button id="generate_password" onclick="gen_password()">Generate Password</button>
                 <button id="copy_password" onclick="copy_password()">Copy Password</button>
