@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+a {
+    cursor: pointer;
+}
+
+.body-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    overflow: scroll;
+}
+
+header, nav, main, footer {
+    margin: 2px;
+    padding: 5px;
+}
+
+header, footer {
+    width: 1015px;
+}
+
+footer {
+    text-align: right;
+}
+
+nav, main {
+    display: inline-block;
+    vertical-align:top;
+    height: 85vh;
+}
+
+nav {
+    width: 125px;
+    text-align: center;
+}
+
+main {
+    width: 875px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: table;
+    border: solid 1px cornflowerblue;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+nav li {
+    display: table-row;
+}
+
+nav li a {
+    display: table-cell;
+    width: 125px;
+    padding: 10px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+nav li a:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+nav li a:active {
+    background-color: blue;
+}
+
+#current {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+article {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+
+main p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
