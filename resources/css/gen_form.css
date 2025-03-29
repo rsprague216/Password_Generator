@@ -50,6 +50,7 @@ nav, main {
 nav {
     width: 125px;
     text-align: center;
+    margin-top: -3px;
 }
 
 main {
