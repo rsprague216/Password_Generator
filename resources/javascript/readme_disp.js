@@ -1,7 +1,7 @@
 let proj_desc = document.querySelector("#project_description");  // project description element
 
 
-fetch("/README.md")  // fetch README file
+fetch("README.md")  // fetch README file
     .then(response => {
         if (!response.ok) {  // check if response is ok
             throw new Error("Network response was not ok " + response.statusText);  // throw error if response is not ok
@@ -9,7 +9,7 @@ fetch("/README.md")  // fetch README file
         return response.text();  // return response text
     })
     .then(data => {
-        proj_desc.innerHTML = JSON.parse(data);  // parse README file and set project description element to parsed HTML
+        proj_desc.innerHTML = marked.parse(data);  // parse README file and set project description element to parsed HTML
     })
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error);  // log error to console
