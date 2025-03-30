@@ -20,7 +20,7 @@
             </ul>
         </nav>
         <main>
-            <section>
+            <section id="generator"></section>
                 <div class="body">
                     <div id="pw_container">
                         <p id="password"></p>
@@ -36,11 +36,11 @@
                     </div>
                     <hr />
                     <div class="options" id="toggles">
-                            <input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase
-                            <input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase
-                            <input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers
-                            <input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols
-                            <input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters
+                        <input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase
+                        <input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase
+                        <input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers
+                        <input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols
+                        <input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters
                     </div>
                     <hr />
                     <div class="options" id="buttons">
@@ -49,11 +49,26 @@
                     </div>
                 </div>
             </section>
+            <section id="about">
+                <article>
+                    <h2>About This Project</h2>
+                    <p id="project_description">
+                        This is a simple password generator that creates strong passwords based on user-defined
+                        criteria. It allows you to specify the length of the password and whether to include
+                        uppercase letters, lowercase letters, numbers, and symbols. Additionally, it can avoid
+                        ambiguous characters to make the password easier to read.
+                    </p>
+                </article>
+                <article id="github_link">
+                    <h3>GitHub: <a href="https://github.com/rsprague216/Password_Generator.git" title="link to github for this project">Password Generator Code</a></h3>
+                </article>
+            </section> 
         </main>
         <footer>
             <small>&copy; 2025 Ryan Sprague</small>
         </footer>
     </div>
     <script src="./resources/javascript/pw_generator.js"></script>
+    <script src="./resources/javascript/readme_disp.js"></script>
 </body>
 </html>
