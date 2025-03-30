@@ -9,7 +9,7 @@ fetch("README.md")  // fetch README file
         return response.text();  // return response text
     })
     .then(data => {
-        proj_desc.innerHTML = JSON.parse(data);  // parse README file and set project description element to parsed HTML
+        proj_desc.innerHTML = marked.parse(data);  // parse README file and set project description element to parsed HTML
     })
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error);  // log error to console
