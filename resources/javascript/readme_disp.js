@@ -16,6 +16,3 @@ fetch("README.md")  // fetch README file
         console.error("There was a problem with the fetch operation:", error);  // log error to console
         proj_desc.innerHTML = "Password generator implemented with HTML, CSS, and JavaScript.";
     });
-
-
-// proj_desc.innerHTML = "This is where the README file will be displayed.";  // set project description element to display README file
