@@ -9,7 +9,7 @@ fetch("README.md")  // fetch README file
         return response.text();  // return response text
     })
     .then(data => {
-        parsedResponse = marked.parse(data);  // parse README file and set project description element to parsed HTML
+        parsedResponse = marked.parse(data).replace(/^\s*<h1>.*?<\/h1>\s*/s, '');  // parse README file and set project description element to parsed HTML
         console.log(parsedResponse);  // log parsed response to console
     })
     .catch(error => {
