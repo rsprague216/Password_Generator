@@ -1,5 +1,5 @@
 let proj_desc = document.querySelector("#project_description");  // project description element
-
+let parsedResponse;
 
 fetch("README.md")  // fetch README file
     .then(response => {
@@ -9,10 +9,12 @@ fetch("README.md")  // fetch README file
         return response.text();  // return response text
     })
     .then(data => {
-        proj_desc.innerHTML = marked.parse(data);  // parse README file and set project description element to parsed HTML
+        parsedResponse = marked.parse(data);  // parse README file and set project description element to parsed HTML
+        console.log(parsedResponse);  // log parsed response to console
     })
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error);  // log error to console
+        proj_desc.innerHTML = "Password generator implemented with HTML, CSS, and JavaScript.";
     });
 
 
