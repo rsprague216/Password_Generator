@@ -14,5 +14,5 @@ fetch("README.md")  // fetch README file
     })
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error);  // log error to console
-        proj_desc.innerHTML = "Password generator implemented with HTML, CSS, and JavaScript.";
+        proj_desc.innerHTML = "<p>Password generator implemented with HTML, CSS, and JavaScript.</p>";
     });
