@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./resources/css/gen_form.css">
-    <link rel="stylesheet" href="./resources/css/pw_generator.css">
-</head>
-<body>
-    <div class='body-align'>
-        <header>
-            <h1>Password Generator</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="https://rsprague216.github.io/">About Me</a></li>
-                <li><a id="current">Password Generator</a></li>
-                <li><a href="#">Dummy 2</a></li>
-                <li><a href="#">Dummy 3</a></li>
-                <li><a href="#">Dummy 4</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section id="generator"></section>
-                <div class="body">
-                    <div id="pw_container">
-                        <p id="password"></p>
-                    </div>
-                    <div class="options" id="size">
-                        <input type="range" id="pw_length" min="8" max="64" value="20" onclick="gen_password()" oninput="update_len_display()">
-                        <span id="pw_size"></span>
-                    </div>
-                    <div class="options">
-                        <!-- <p id="pw_strength">
-                            Password Strength: <span id="pw_strength_value">Weak</span>     // Not implemented yet
-                        </p> -->
-                    </div>
-                    <hr />
-                    <div class="options" id="toggles">
-                        <input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase
-                        <input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase
-                        <input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers
-                        <input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols
-                        <input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters
-                    </div>
-                    <hr />
-                    <div class="options" id="buttons">
-                        <button id="generate_password" onclick="gen_password()">Generate Password</button>
-                        <button id="copy_password" onclick="copy_password()">Copy Password</button>
-                    </div>
-                </div>
-            </section>
-            <section id="about">
-                <article>
-                    <h2>About This Project</h2>
-                    <div id="project_description"></div>
-                    <a id="github_link" href="https://github.com/rsprague216/Password_Generator.git" target="_blank" title="link to github for this project">GitHub Repo</a>
-                </article>
-            </section> 
-        </main>
-        <footer>
-            <small>&copy; 2025 Ryan Sprague</small>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/gen_form.css" />
+    <link rel="stylesheet" href="./resources/css/pw_generator.css" />
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html"><h1>Password Generator</h1></a>
+      <ul class="nav">
+        <li><a href="about.html">About the Project</a></li>
+        <li><a href="https://github.com/rsprague216/Password_Generator" target="_blank">GitHub</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+      <section class="generator">
+        <div class="body">
+          <div id="pw_container">
+            <p id="password"></p>
+          </div>
+          <div class="options" id="size">
+            <input type="range" id="pw_length" min="8" max="64" value="20" onclick="gen_password()" oninput="update_len_display()">
+            <span id="pw_size"></span>
+          </div>
+          <!-- <div class="options">
+               <p id="pw_strength">
+                  Password Strength: <span id="pw_strength_value">Weak</span>     // Not implemented yet
+              </p>
+          </div> -->
+          <hr />
+          <div class="options" id="toggles">
+            <div class="toggle"><input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase</div>
+            <div class="toggle"><input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase</div>
+            <div class="toggle"><input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers</div>
+            <div class="toggle"><input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols</div>
+            <div class="toggle"><input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters</div>
+          </div>
+          <hr />
+          <div class="options" id="buttons">
+            <button id="generate_password" class="gen" onclick="gen_password()"></button>
+            <button id="copy_password" class="copy" onclick="copy_password()"></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ryan Sprague</p>
+      <p class="extra">Created with HTML, CSS, &amp; JavaScript</p>
+    </footer>
+
+    <!-- scripts -->
     <script src="./resources/javascript/pw_generator.js"></script>
-    <script src="./resources/javascript/readme_disp.js"></script>
-</body>
+  </body>
 </html>

@@ -1,82 +1,82 @@
+/* Main Section */
 
-.body {
-    border: solid 1px hsl(210, 100%, 75%);
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    width: 700px;
-    height: 450px;
-    margin: 70px auto;
+.generator {
+    position: relative;
+    top: 10rem;
+}
+
+.generator .body {
     background-color: hsl(210, 100%, 75%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    max-width: 45rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 #pw_container {
     width: 100%;
-    height: 100px;
+    padding: 1.5rem;
     border: solid 1px hsl(210, 100%, 95%);
-    border-radius: 15px 15px 0 0;
     background-color: hsl(210, 100%, 95%);
-    position: relative;
-}
-
-#password {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    overflow-wrap: break-word;
+    font-size: 1.5rem;
     color: hsl(210, 100%, 55%)
 }
 
-.options {
-    padding: 0 20px;
-    margin: 40px 0;
+#password {
+    overflow-wrap: break-word;
 }
 
-#pw_length {
-    width: 90%;
-    margin-right: 20px;
+.generator .options {
+    padding: 1.5rem 2rem 2rem 2rem;
 }
 
-#pw_size {
-    color: white;
+#size {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+}
+#size input[type="range"] {
+    flex: 1 0 auto;
+}
+#size #pw_size {
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: center;
 }
 
 #toggles {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     font-size: small;
-    color: white;
 }
-
-#toggles input[type="checkbox"] {
-    margin-left: 20px;
-    margin-right: 5px;
-}
-
-hr {
-    width: 90%;
-    margin: 0 auto;
-    border: solid 1px hsl(210, 100%, 55%);
-    border-radius: 5px;
+#toggles .toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 #buttons {
-    width: 485px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 #buttons button {
-    display: inline-block;
-    width: 210px;
+    width: 13rem;
     background-color: hsl(210, 100%, 55%);
     color: white;
     border: none;
-    border-radius: 15px;
-    padding: 20px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 10px;
+    padding: 1.25rem;;
+    margin-top: 0.5rem;
     cursor: pointer;
 }
 #buttons button:hover {
@@ -87,6 +87,80 @@ hr {
     color: hsl(210, 100%, 65%);
 }
 
-#buttons #copy_password {
-    margin-left: 20px;
+#buttons button.gen::before {
+    content: "Generate Password";
+}
+#buttons button.copy::before {
+    content: "Copy Password";
+}
+
+hr {
+    width: 90%;
+    border: solid 1px hsl(210, 100%, 55%);
+}
+
+@media only screen and (max-width: 730px) {
+    .generator {
+        top: 4rem;
+    }
+    .generator .body {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 450px) {
+    .generator {
+        position: static;
+        padding-top: 5rem;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 605px) {
+    .generator {
+        top: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    #buttons button {
+        width: 30vw;
+    }
+    #buttons button.gen::before {
+        content: "Generate";
+    }
+    #buttons button.copy::before {
+        content: "Copy";
+    }
+    
+}
+
+/* Footer Section */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .extra {
+        display: none;
+    }
+}
+@media only screen and (orientation: landscape) and (max-height: 450px) {
+    footer {
+        position: static;
+        margin-top: 1rem;
+    }
 }
