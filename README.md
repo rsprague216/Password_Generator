@@ -1,11 +1,11 @@
 # Password_Generator
-Password generator implemented with HTML, CSS, and JavaScript.
+This is a simple password generator implemented with HTML, CSS, and JavaScript.  No frameworks, such as react or node, are currently used, but I do plan to implement them in the future.
 
 ### HTML
-The HTML in this project is semantic and straight forward.  It the body of the of the generator and the password display are made up of two nested divs, aligned at the top, and set to different shades of blue. The following user inputs are organized into their own divs and separated by horizontal rules.  The buttons are simple and self-evident in their purpose and function.
+The HTML in this project is semantic and straight forward.  The generator is contained in a main tag with the class "generator", with a div established as the body, and a nested dev established as the password container.  The body also contains a series of "options" divs containing all the metrics that a user can toggle to customize their generated password.  At the bottom of the body are two buttons a user can use to trigger a new password to be generated, or to copy the password to their clipboard.
 
 ### CSS
-The CSS for this project largely makes use of class and id selectors.  The colors are selected with HSL.  The body of the generator is centered in the display space by way of margins.  The password display manages overflow by wrapping the text to fit it within the alloted space.  The buttons establish interactivity by making use of the hover and active pseudo classes.
+The CSS for this project largely makes use of class and id selectors.  The colors are selected with HSL.  The body of the generator is centered in the display space by way of margins.  The contents of the generator within the body are arranged as a flexbox layout, maintaining a responsive design.  Media queries are used to change the spacing of the body and the behavior of the footer across screen sizes.  The password display manages overflow by wrapping the text to fit within the horizontal space, and the flexbox design allows the containr to stretch horizontally.  The buttons establish interactivity by making use of the hover and active pseudo classes, andmedia queries update their size as well as their labels.
 
 ### JavaScript
 The JavaScript was the most challenging aspect of this project.  If you look through the code, the comments do a good job of documenting the functions and purposes of the various parts of the script.

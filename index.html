@@ -16,37 +16,34 @@
       </ul>
     </header>
 
-    <main>
-
-      <section class="generator">
-        <div class="body">
-          <div id="pw_container">
-            <p id="password"></p>
-          </div>
-          <div class="options" id="size">
-            <input type="range" id="pw_length" min="8" max="64" value="20" onclick="gen_password()" oninput="update_len_display()">
-            <span id="pw_size"></span>
-          </div>
-          <!-- <div class="options">
-               <p id="pw_strength">
-                  Password Strength: <span id="pw_strength_value">Weak</span>     // Not implemented yet
-              </p>
-          </div> -->
-          <hr />
-          <div class="options" id="toggles">
-            <div class="toggle"><input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase</div>
-            <div class="toggle"><input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase</div>
-            <div class="toggle"><input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers</div>
-            <div class="toggle"><input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols</div>
-            <div class="toggle"><input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters</div>
-          </div>
-          <hr />
-          <div class="options" id="buttons">
-            <button id="generate_password" class="gen" onclick="gen_password()"></button>
-            <button id="copy_password" class="copy" onclick="copy_password()"></button>
-          </div>
+    <main class="generator">
+      <div class="body">
+        <div id="pw_container">
+          <p id="password"></p>
         </div>
-      </section>
+        <div class="options" id="size">
+          <input type="range" id="pw_length" min="8" max="64" value="20" onclick="gen_password()" oninput="update_len_display()">
+          <span id="pw_size"></span>
+        </div>
+        <!-- <div class="options">
+              <p id="pw_strength">
+                Password Strength: <span id="pw_strength_value">Weak</span>     // Not implemented yet
+            </p>
+        </div> -->
+        <hr />
+        <div class="options" id="toggles">
+          <div class="toggle"><input type="checkbox" id="pw_uppercase" onclick="gen_password()" checked>Uppercase</div>
+          <div class="toggle"><input type="checkbox" id="pw_lowercase" onclick="gen_password()" checked>Lowercase</div>
+          <div class="toggle"><input type="checkbox" id="pw_numbers" onclick="gen_password()" checked>Numbers</div>
+          <div class="toggle"><input type="checkbox" id="pw_special" onclick="gen_password()" checked>Symbols</div>
+          <div class="toggle"><input type="checkbox" id="avoid_ambig" onclick="gen_password()" checked>Avoid Ambiguous Characters</div>
+        </div>
+        <hr />
+        <div class="options" id="buttons">
+          <button id="generate_password" class="gen" onclick="gen_password()"></button>
+          <button id="copy_password" class="copy" onclick="copy_password()"></button>
+        </div>
+      </div>
 
     </main>
 
