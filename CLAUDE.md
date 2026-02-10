@@ -70,8 +70,8 @@ Configuration files:
 ### Component Architecture
 
 **App.jsx** - Top-level component
-- Sets up React Router with `basename="/Password_Generator"` for GH Pages
-- Wraps app in `<BrowserRouter>`
+- Sets up React Router with `HashRouter` for GitHub Pages compatibility
+- Wraps app in `<HashRouter>` (uses hash-based routing to avoid 404s on refresh)
 - Renders Header, Routes (/ and /about), Footer
 - Sets background to mint color
 

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import GeneratorPage from './pages/GeneratorPage';
@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
-    <BrowserRouter basename="/Password_Generator">
+    <HashRouter>
       <div className="min-h-screen bg-mint flex flex-col">
         <Header />
         <Routes>
@@ -15,7 +15,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

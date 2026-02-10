@@ -5,7 +5,7 @@ export default function AboutPage() {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    fetch('/ABOUT.md')
+    fetch(`${import.meta.env.BASE_URL}ABOUT.md`)
       .then(res => {
         if (!res.ok) {
           throw new Error('Network response was not ok ' + res.statusText);
